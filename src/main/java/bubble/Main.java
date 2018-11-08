@@ -1,5 +1,8 @@
 package bubble;
 
+import static utils.Utils.printArray;
+import static utils.Utils.swap;
+
 public class Main {
     public static void main(String[] args) {
         int[] array = new int[]{1,10,100,21,5};
@@ -11,14 +14,6 @@ public class Main {
         array = new int[]{1,10,100,21,5};
         bubbleSort_optimized(array);
         printArray(array);
-    }
-
-    private static void printArray(int[] array) {
-        System.out.print("[");
-        for (int i : array) {
-            System.out.print(i + ", ");
-        }
-        System.out.println("]");
     }
 
     public static void bubbleSort(int[] array) {
@@ -39,11 +34,5 @@ public class Main {
                 }
             }
         }
-    }
-
-    private static void swap(int j, int i, int[] array) {
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
     }
 }
